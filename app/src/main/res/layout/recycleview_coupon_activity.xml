@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginBottom="2dp"
+android:background="@color/colorPrimaryText"
+android:paddingLeft="20dp"
+android:paddingTop="10dp"
+android:paddingBottom="10dp"
+android:paddingRight="20dp"
+
+android:id="@+id/relativeLayoutCoupon">
+
+
+<TextView
+    android:id="@+id/textViewCouponTitle"
+
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+
+
+    android:text="$10 Off $50"
+    android:textSize="16sp"
+    android:textColor="@color/colorPrimary"
+    />
+
+<TextView
+    android:gravity="top"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/textViewCouponTitle"
+    android:paddingTop="5dp"
+    android:id="@+id/textViewCouponExpiryDate"
+
+    android:text="Expires 30 Apr 2013 10:30"/>
+
+<ImageView
+
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentRight="true"
+    android:layout_centerVertical="true"
+    android:id="@+id/imageViewCouponCheckBtn" />
+</RelativeLayout>

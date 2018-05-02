@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.campus_comuputer.listviewapplication">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".verticalRecycleView_activity.MainActivity" />
+        <activity android:name=".horizontalRecycleView_activity.HorizontalRecycleViewActivity" />
+        <activity android:name=".hybridRecycleView_activity.HybridActivity" />
+        <activity android:name=".copyright_activity.copyrightActivity" />
+        <activity android:name=".cutomer_feedback_activity.customerFeedbackActivity" />
+        <activity android:name=".launcher_activity.launcherActivity" />
+        <activity android:name=".message_activity.messageActivity" />
+        <activity android:name=".payment_activity.paymentActivity" />
+        <activity android:name=".payment_result_activity.paymentResultActivity" />
+        <activity android:name=".register_activity.registerActivity" />
+        <activity android:name=".signin_activity.signInActivity" />
+        <activity android:name=".account_activity.accountActivity" />
+        <activity android:name=".addNewAddress_activity.addNewAddressActivity" />
+        <activity android:name=".categories_activity.categoriesActivity" />
+        <activity android:name=".coupon_activity.couponActivity" />
+        <activity android:name=".paymentRequired_activity.paymentRequiredActivity" />
+        <activity android:name=".productList_activity.productListActivity" />
+        <activity android:name=".CiskRisk_activities.CiskMainQuestionsActivity" />
+        <activity android:name=".CiskRisk_activities.CiskLauncherActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".zoftinoRecycleViewActivity.zoftinoActivity"></activity>
+        <activity android:name=".CiskRisk_activities.CiskRiskResultsActivity"></activity>
+    </application>
+
+</manifest>

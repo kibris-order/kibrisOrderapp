@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+   android:background="@color/colorPrimaryBackground"
+    tools:context="com.example.campus_comuputer.listviewapplication.message_activity.messageActivity">
+
+
+    <TextView
+        android:layout_marginBottom="10dp"
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Shipping:" />
+
+    <EditText
+        android:layout_marginBottom="30dp"
+        android:id="@+id/editText3"
+        android:background="@color/colorPrimaryText"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+
+        android:text="US $13.00 via UPS" />
+
+    <TextView
+        android:layout_marginBottom="10dp"
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Message:" />
+
+    <EditText
+        android:layout_marginBottom="30dp"
+        android:id="@+id/editText4"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:fadingEdge="vertical"
+        android:ems="10"
+        android:padding="10dp"
+        android:background="@color/colorPrimaryText"
+        android:inputType="textPersonName"
+        android:textSize="12dp"
+        android:hint="To Seller(Optional)" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorPrimaryText"/>
+</LinearLayout>
