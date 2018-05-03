@@ -30,14 +30,17 @@
         <activity android:name=".productList_activity.productListActivity" />
         <activity android:name=".CiskRisk_activities.CiskMainQuestionsActivity" />
         <activity android:name=".CiskRisk_activities.CiskLauncherActivity">
+
+        </activity>
+        <activity android:name=".zoftinoRecycleViewActivity.zoftinoActivity" />
+        <activity android:name=".CiskRisk_activities.CiskRiskResultsActivity" />
+        <activity android:name=".debug.debugActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".zoftinoRecycleViewActivity.zoftinoActivity"></activity>
-        <activity android:name=".CiskRisk_activities.CiskRiskResultsActivity"></activity>
     </application>
 
 </manifest>
