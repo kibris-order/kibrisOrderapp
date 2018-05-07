@@ -108,7 +108,7 @@ CiskRiskDataModel bindCiskModel = mCiskRiskDataModels.get(pos);
         radioButtonCiskRiskOption = (RadioButton) itemView.findViewById(R.id.radioButtonCiskRiskOption);
         textViewCiskRiskAnswerText = (TextView) itemView.findViewById(R.id.textViewCiskRiskAnswerText);
         linearLayoutCiskRisk = (LinearLayout) itemView.findViewById(R.id.linearLayoutCiskRisk);
-//need to create an additional adapter like this
+//need to create an additional adapter like this asap
             radioButtonCiskRiskOption.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
