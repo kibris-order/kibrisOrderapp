@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="43dp"
+            android:layout_marginTop="60dp"
             android:text="Results page"
             android:textColor="@color/colorPrimary"
             android:textSize="30dp" />
