@@ -29,9 +29,7 @@
         <activity android:name=".paymentRequired_activity.paymentRequiredActivity" />
         <activity android:name=".productList_activity.productListActivity" />
         <activity android:name=".CiskRisk_activities.CiskMainQuestionsActivity" />
-        <activity android:name=".CiskRisk_activities.CiskLauncherActivity">
-
-        </activity>
+        <activity android:name=".CiskRisk_activities.CiskLauncherActivity"></activity>
         <activity android:name=".zoftinoRecycleViewActivity.zoftinoActivity" />
         <activity android:name=".CiskRisk_activities.CiskRiskResultsActivity" />
         <activity android:name=".debug.debugActivity">
@@ -41,6 +39,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".constraintLayout"></activity>
     </application>
 
 </manifest>

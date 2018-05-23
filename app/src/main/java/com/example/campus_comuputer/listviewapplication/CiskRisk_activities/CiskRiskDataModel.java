@@ -12,10 +12,10 @@ public class CiskRiskDataModel {
     private String questionSubheader;
     private String questionImageUrl;
     private String questionAnswerOptionsHeader;
-    private ArrayList<CiskRiskQuestionsAnswersDataModel> questionAnswerOptions= new ArrayList<>();
+    private ArrayList<CiskRiskQuestionsAnswersDataModel.CiskRiskQuestionsAnswersDataModelArr> questionAnswerOptions= new ArrayList<>();
 
-    public CiskRiskDataModel(String questiongHeader, String question, String questionSubheader, String questionImageUrl, String questionAnswerOptionsHeader, ArrayList<CiskRiskQuestionsAnswersDataModel> questionAnswerOptions) {
-        this.questiongHeader = questiongHeader;
+    public CiskRiskDataModel(String questiongHeader, String question, String questionSubheader, String questionImageUrl, String questionAnswerOptionsHeader, ArrayList<CiskRiskQuestionsAnswersDataModel.CiskRiskQuestionsAnswersDataModelArr> questionAnswerOptions) {
+            this.questiongHeader = questiongHeader;
         this.question = question;
         this.questionSubheader = questionSubheader;
         this.questionImageUrl = questionImageUrl;
@@ -25,8 +25,6 @@ public class CiskRiskDataModel {
 
     public void setAllCheckedToFalse(){
 
-         questionAnswerOptions.get(0).setChecked(false);
-        questionAnswerOptions.get(1).setChecked(false);
 
     }
     public String getQuestionAnswerOptionsHeader() {
@@ -69,11 +67,11 @@ public class CiskRiskDataModel {
         this.question = question;
     }
 
-    public ArrayList<CiskRiskQuestionsAnswersDataModel> getQuestionAnswerOptions() {
+    public ArrayList<CiskRiskQuestionsAnswersDataModel.CiskRiskQuestionsAnswersDataModelArr> getQuestionAnswerOptions() {
         return questionAnswerOptions;
     }
 
-    public void setQuestionAnswerOptions(ArrayList<CiskRiskQuestionsAnswersDataModel> questionAnswerOptions) {
+    public void setQuestionAnswerOptions(ArrayList<CiskRiskQuestionsAnswersDataModel.CiskRiskQuestionsAnswersDataModelArr> questionAnswerOptions) {
         this.questionAnswerOptions = questionAnswerOptions;
     }
 }

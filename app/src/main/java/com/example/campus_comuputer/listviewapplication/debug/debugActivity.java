@@ -15,6 +15,7 @@ import com.example.campus_comuputer.listviewapplication.R;
 import com.example.campus_comuputer.listviewapplication.account_activity.accountActivity;
 import com.example.campus_comuputer.listviewapplication.addNewAddress_activity.addNewAddressActivity;
 import com.example.campus_comuputer.listviewapplication.categories_activity.categoriesActivity;
+import com.example.campus_comuputer.listviewapplication.constraintLayout;
 import com.example.campus_comuputer.listviewapplication.copyright_activity.copyrightActivity;
 import com.example.campus_comuputer.listviewapplication.coupon_activity.couponActivity;
 import com.example.campus_comuputer.listviewapplication.cutomer_feedback_activity.customerFeedbackActivity;
@@ -45,7 +46,8 @@ public class debugActivity extends AppCompatActivity {
             "paymentActivity",
             "paymentResultActivity",
             "paymentRequiredActivity",
-            "productListActivity"};
+            "productListActivity",
+            "ConstraintLayoutActivity"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,8 +95,9 @@ public class debugActivity extends AppCompatActivity {
                     startActivity(new Intent(debugActivity.this,paymentRequiredActivity.class));break;
                 case 14:
                     startActivity(new Intent(debugActivity.this,productListActivity.class));break;
+                case 15:
+                    startActivity(new Intent(debugActivity.this, constraintLayout.class));break;
             }
-
 
             }
         });

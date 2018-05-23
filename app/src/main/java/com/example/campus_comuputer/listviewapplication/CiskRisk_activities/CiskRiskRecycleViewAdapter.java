@@ -29,12 +29,19 @@ public class CiskRiskRecycleViewAdapter extends RecyclerView.Adapter<CiskRiskRec
     private Context mContext;
     private ArrayList<CiskRiskDataModel> mCiskRiskDataModels = new ArrayList<>();
     private int pos;
+    private int arrayIndex;
     private int lastSelectedPosition = -1;
 
     public CiskRiskRecycleViewAdapter(Context mContext, ArrayList<CiskRiskDataModel> ciskRiskDataModels, int pos) {
         Log.d(TAG, "CiskRiskRecycleViewAdapter: Called");
         this.mContext = mContext;
         this.mCiskRiskDataModels = ciskRiskDataModels;
+        SharedPreferences sharedPrefd = mContext.getSharedPreferences("question2" , Context.MODE_PRIVATE);
+
+        String xs =sharedPrefd.getString("answer","Male");
+        if(pos ==3 && xs.equals("Female")){
+            arrayIndex =1;}
+
         this.pos =pos;
     }
 
@@ -55,7 +62,7 @@ CiskRiskDataModel bindCiskModel = mCiskRiskDataModels.get(pos);
      /*if(mCiskRiskDataModels.get(pos).getQuestionAnswerOptions().get(position).isChecked())
         holder.radioButtonCiskRiskOption.setChecked(true);*/
 
-        holder.textViewCiskRiskAnswerText.setText(bindCiskModel.getQuestionAnswerOptions().get(position).getAnswer());
+        holder.textViewCiskRiskAnswerText.setText(bindCiskModel.getQuestionAnswerOptions().get(arrayIndex).getAnswersArray().get(position).getAnswer());
 
         holder.radioButtonCiskRiskOption.setChecked(lastSelectedPosition == position);
 
@@ -64,7 +71,7 @@ CiskRiskDataModel bindCiskModel = mCiskRiskDataModels.get(pos);
                 final String FILE_NAME = "file.txt";
                 Log.d("Log", "Write file called");
                 FileOutputStream fos = mContext.openFileOutput(FILE_NAME, Context.MODE_APPEND);
-                String text = "QUESTION "+ (pos+1)+":"+bindCiskModel.getQuestionAnswerOptions().get(position).getAnswer()+" points: "+bindCiskModel.getQuestionAnswerOptions().get(position).getPoints() +"/n ";
+                String text = "QUESTION "+ (pos+1)+":"+bindCiskModel.getQuestionAnswerOptions().get(arrayIndex).getAnswersArray().get(position).getAnswer()+" points: "+bindCiskModel.getQuestionAnswerOptions().get(arrayIndex).getAnswersArray().get(position).getPoints() +"/n ";
                 Log.d(TAG, "onBindViewHolder: saved in "+FILE_NAME+" "+text);
                 fos.write(text.toString().getBytes());
                 fos.close();
@@ -73,11 +80,11 @@ CiskRiskDataModel bindCiskModel = mCiskRiskDataModels.get(pos);
             }
             {
                 Log.d(TAG, "onBindViewHolder:sharedPrefs begin ");
-                
+
                 SharedPreferences sharedPref = mContext.getSharedPreferences("question"+(pos+1) ,Context.MODE_PRIVATE);
             SharedPreferences.Editor editor = sharedPref.edit();
-            editor.putInt("points",bindCiskModel.getQuestionAnswerOptions().get(position).getPoints());
-            editor.putString("answer",bindCiskModel.getQuestionAnswerOptions().get(position).getAnswer());
+            editor.putInt("points",bindCiskModel.getQuestionAnswerOptions().get(arrayIndex).getAnswersArray().get(position).getPoints());
+            editor.putString("answer",bindCiskModel.getQuestionAnswerOptions().get(arrayIndex).getAnswersArray().get(position).getAnswer());
             editor.putInt("questionNo",pos+1);
             editor.apply();
 
@@ -92,7 +99,7 @@ CiskRiskDataModel bindCiskModel = mCiskRiskDataModels.get(pos);
 
     @Override
     public int getItemCount() {
-        return mCiskRiskDataModels.get(pos).getQuestionAnswerOptions().size();
+        return mCiskRiskDataModels.get(pos).getQuestionAnswerOptions().get(arrayIndex).getAnswersArray().size();
     }
 
 

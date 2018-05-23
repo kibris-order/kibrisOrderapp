@@ -1,5 +1,7 @@
 package com.example.campus_comuputer.listviewapplication.CiskRisk_activities;
 
+import java.util.ArrayList;
+
 /**
  * Created by Campus-Comuputer on 4/27/2018.
  */
@@ -39,4 +41,24 @@ public class CiskRiskQuestionsAnswersDataModel {
     public void setChecked(boolean checked) {
         isChecked = checked;
     }
+
+
+    public static class CiskRiskQuestionsAnswersDataModelArr{
+        private ArrayList<CiskRiskQuestionsAnswersDataModel> AnswersArray;
+
+        public CiskRiskQuestionsAnswersDataModelArr(ArrayList<CiskRiskQuestionsAnswersDataModel> answersArray) {
+            AnswersArray = answersArray;
+        }
+
+
+        public ArrayList<CiskRiskQuestionsAnswersDataModel> getAnswersArray() {
+            return AnswersArray;
+        }
+
+        public void setAnswersArray(ArrayList<CiskRiskQuestionsAnswersDataModel> answersArray) {
+            AnswersArray = answersArray;
+        }
+    }
 }
+
+
